@@ -16,6 +16,7 @@
   --color-lightGrey: #F4F6F8;
   --color-gray: #9DAEC2;
   --color-darkGrey : #6E8098;
+  --color-blue : #5964E0;
 
   --text-h1: 28px;
   --text-h1--line-height: 34px; 
@@ -33,4 +34,23 @@
   --text-body--line-height: 26px; 
 
 
+}
+
+.header-bg{
+  background-image: url('/public/mobile/bg-pattern-header.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media screen and (min-width : 768px) {
+  .header-bg{
+    background-image: url('/public/tablet/bg-pattern-header.svg');
+  }
+}
+
+@media screen and (min-width : 1440px) {
+  .header-bg{
+    background-image: url('/public/desktop/bg-pattern-header.svg');
+  }
 }
