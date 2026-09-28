@@ -1,6 +1,8 @@
 import { createContext, useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router";
 import AppLayout from "./AppLayout";
+import Homepage from "./Homepage";
+import JobDetails from "./JobDetails";
 
 type Theme = "dark" | "light" | null;
 
@@ -40,7 +42,10 @@ function App() {
         }}
       >
         <Routes>
-          <Route index element={<AppLayout />} />
+          <Route element={<AppLayout />}>
+            <Route path="/" element={<Homepage />} />
+            <Route path=":id" element={<JobDetails />} />
+          </Route>
         </Routes>
       </ThemeContext.Provider>
     </BrowserRouter>
